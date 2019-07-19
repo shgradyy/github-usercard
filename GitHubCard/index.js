@@ -2,7 +2,20 @@
            (replacing the palceholder with your Github name):
            https://api.github.com/users/<your name>
 */
-axios.get('https://api.github.com/user/shgradyy');
+
+
+axios.get('https://api.github.com/users/shgradyy')
+    .then( response => {
+      console.log("here is your response");
+      console.log(response);
+    })
+    .catch( err => {
+      console.log("you have an error");
+      console.log(response);
+    })
+    .finally( done => {
+      console.log("the chain is complete")
+    });
   
 /* Step 2: Inspect and study the data coming back, this is YOUR 
    github info! You will need to understand the structure of this 
